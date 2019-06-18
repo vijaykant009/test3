@@ -1,0 +1,104 @@
+{% extends "about.html" %}
+{% block content %}
+
+        <table>
+            <tr>
+                <th>time</th>
+                <th>latitude</th>
+                <th>longitude</th>
+                <th>depth</th>
+                <th>mag</th>
+                <th>magType</th>
+                <th>nst</th>
+                <th>gap</th>
+                <th>dmin</th>
+                <th>rms</th>
+                <th>net</th>
+                <th>id</th>
+                <th>updated</th>
+                <th>place</th>
+                <th>type</th>
+                <th>horizontalError</th>
+                <th>depthError</th>
+                <th>magError</th>
+                <th>magNst</th>
+                <th>status</th>
+                <th>locationSource</th>
+                <th>magSource</th>
+
+            </tr>
+            {% for row in row %}
+                <tr>
+                    <td>
+                        {{row.time}}
+
+                    </td>
+                    <td>
+                        {{row.latitude}}
+                    </td>
+                    <td>
+                        {{row.longitude}}
+                    </td>
+                    <td>
+                        {{row.depth}}
+                    </td>
+                    <td>
+                        {{row.mag}}
+                    </td>
+                    <td>
+                        {{row.magType}}
+                    </td>
+                    <td>
+                        {{row.nst}}
+                    </td>
+                    <td>
+                        {{row.gap}}
+                    </td>
+                    <td>
+                        {{row.dmin}}
+                    </td>
+                    <td>
+                        {{row.rms}}
+                    </td>
+                    <td>
+                        {{row.net}}
+                    </td>
+                    <td>
+                        {{row.id}}
+                    </td>
+                    <td>
+                        {{row.updated}}
+                    </td>
+                    <td>
+                        {{row.place}}
+                    </td>
+                    <td>
+                            {{row.type}}
+                    </td>
+                    <td>
+                            {{row.horizontalError}}
+                    </td>
+                    <td>
+                            {{row.depthError}}
+                    </td>
+                    <td>
+                            {{row.magError}}
+                    </td>
+                    <td>
+                            {{row.magNst}}
+                    </td>
+                    <td>
+                            {{row.status}}
+                    </td>
+                    <td>
+                            {{row.locationSource}}
+                    </td>
+                    <td>
+                            {{row.magSource}}
+                    </td>
+
+                </tr>
+
+            {% endfor %}
+        </table>
+{% endblock content %}
